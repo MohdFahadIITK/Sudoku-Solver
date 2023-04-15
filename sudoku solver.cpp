@@ -1,22 +1,18 @@
 #include <bits/stdc++.h>
 #define X 9
 using namespace std;
-int grid[X][X]; // {
-//    {4, 0, 2, 4, 0, 9, 2, 5, 0},
-//    {7, 2, 0, 0, 0, 0, 0, 0, 0},
-//    {0, 8, 7, 0, 0, 0, 0, 3, 1},
-//    {0, 0, 3, 0, 1, 0, 5, 8, 0},
-//    {9, 0, 0, 4, 6, 3, 0, 0, 5},
-//    {0, 5, 0, 0, 9, 2, 6, 0, 0},
-//    {1, 3, 0, 0, 0, 0, 2, 5, 0},
-//    {0, 0, 0, 0, 0, 0, 0, 7, 4},
-//    {0, 0, 5, 2, 0, 6, 3, 0, 0}
-// };
-   for(int i=0;i<9;i++){
-      for(int j=0;j<9;j++){
-         cin>>grid[i][j];
-      }
-   }
+int grid[X][X];/*={
+    {1, 2, 3, 4, 5, 6, 7, 8, 9},
+    {4, 5, 6, 7, 8, 9, 1, 2, 3},
+    {7, 8, 9, 1, 2, 3, 4, 5, 6},
+    {2, 3, 4, 5, 6, 7, 8, 9, 1},
+    {5, 6, 7, 8, 9, 1, 2, 3, 4},
+    {8, 9, 1, 2, 3, 4, 5, 6, 7},
+    {3, 4, 5, 6, 7, 8, 9, 1, 2},
+    {6, 7, 8, 9, 1, 2, 3, 4, 5},
+    {9, 1, 2, 3, 4, 5, 6, 0, 8}
+ };*/
+   
 
 bool PresentInBox(int boxStartRow, int boxStartCol, int num){
 //checking whether num is present in 3x3 box or not
@@ -87,6 +83,11 @@ bool solveSudoku(){
    return false;
 }
 int main(){
+   for(int i=0;i<9;i++){
+      for(int j=0;j<9;j++){
+         cin>>grid[i][j];
+      }
+   }
    if (solveSudoku() == true)
       sudokuGrid();
    else
